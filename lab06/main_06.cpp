@@ -51,6 +51,6 @@ int main() {
     // 5. Felhasználó eredményeinek lekérdezése és kiíratása (map tesztelése)
 
 
-    std::cout << "\n--- TESZT PROGRAM VÉGE ---\n";
+    std::cout << "\n\n--- TESZT PROGRAM VÉGE ---\n";
     return 0;
 }
