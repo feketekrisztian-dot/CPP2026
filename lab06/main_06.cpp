@@ -8,12 +8,9 @@
 #include "User.h"
 
 int main() {
-    // Magyar ékezetek helyes megjelenítése konzolon
-    std::setlocale(LC_ALL, "Hungarian");
 
     std::cout << "--- TESZT PROGRAM INDULÁSA ---\n\n";
 
-    // 1. Kvíz és kérdések létrehozása
     Quiz mathQuiz("Alapvető Matematika");
 
     QuizItem q1("Mennyi 5 + 5 * 2?");
@@ -28,7 +25,7 @@ int main() {
     q1.addAnsweres("14");
     q1.setCorrectAnswer(2);
 
-    mathQuiz.addItems(q1); // Helyes válasz: 15 (1-es indexű, azaz a 2. opció)
+    mathQuiz.addItems(q1);
 
     QuizItem q2("Mennyi 10 * 2?");
     q2.addAnsweres("15");
@@ -37,18 +34,23 @@ int main() {
     q2.addAnsweres("56");
     q2.setCorrectAnswer(2);
 
+    mathQuiz.addItems(q2);
 
-    // Kvíz lezárása a finalize metódussal
+    QuizItem q3("Mennyi 11413410 * 2?");
+    q3.addAnsweres("123r5");
+    q3.addAnsweres("2r230");
+    q3.addAnsweres("rr233");
+    q3.addAnsweres("5t4236");
+    q3.setCorrectAnswer(3);
+
+    mathQuiz.addItems(q3);
     mathQuiz.finalize();
 
-    // 3. Felhasználó létrehozása
+
     User player("Kiss Péter");
 
-    // 4. Játék indítása a QuizGame osztállyal (laza tartalmazás)
     QuizGame game(player, mathQuiz);
-    game.Start(player,mathQuiz);
-
-    // 5. Felhasználó eredményeinek lekérdezése és kiíratása (map tesztelése)
+    game.Start(player,mathQuiz);1
 
 
     std::cout << "\n\n--- TESZT PROGRAM VÉGE ---\n";

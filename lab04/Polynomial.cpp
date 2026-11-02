@@ -65,13 +65,13 @@ Polynomial operator-(const Polynomial &a) {
 
 Polynomial operator+(const Polynomial &a, const Polynomial &b) {
     if(a.capacity>b.capacity) {
-        Polynomial result(a.capacity,a.coefficients);
+        Polynomial result(a.degree(),a.coefficients);
         for (int i=0;i<b.capacity;i++) {
             result.coefficients[i] += b.coefficients[i];
         }
         return result;
     }
-    Polynomial result(b.capacity,b.coefficients);
+    Polynomial result(b.degree(),b.coefficients);
     for (int i=0;i<a.capacity;i++) {
         result.coefficients[i] += a.coefficients[i];
     }
@@ -81,12 +81,12 @@ Polynomial operator+(const Polynomial &a, const Polynomial &b) {
 
 Polynomial operator-(const Polynomial &a, const Polynomial &b) {
     if(a.capacity>b.capacity) {
-        Polynomial result(a.capacity,a.coefficients);
+        Polynomial result(a.degree(),a.coefficients);
         for (int i=0;i<b.capacity;i++) {
             result.coefficients[i] -= b.coefficients[i];
         }
     }
-    Polynomial result(b.capacity,b.coefficients);
+    Polynomial result(b.degree(),b.coefficients);
     for (int i=0;i<a.capacity;i++) {
         result.coefficients[i] -= a.coefficients[i];
     }
@@ -95,12 +95,12 @@ Polynomial operator-(const Polynomial &a, const Polynomial &b) {
 
 Polynomial operator*(const Polynomial &a, const Polynomial &b) {
     if(a.capacity>b.capacity) {
-        Polynomial result(a.capacity,a.coefficients);
+        Polynomial result(a.degree(),a.coefficients);
         for (int i=0;i<b.capacity;i++) {
             result.coefficients[i] *= b.coefficients[i];
         }
     }
-    Polynomial result(b.capacity,b.coefficients);
+    Polynomial result(b.degree(),b.coefficients);
     for (int i=0;i<a.capacity;i++) {
         result.coefficients[i] *= a.coefficients[i];
     }
