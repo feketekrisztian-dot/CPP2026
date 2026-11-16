@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     cout << "=== Fajlrendszer Szimulacio ===" << endl << endl;
 
-    // 1. Gyökér könyvtár létrehozása (root)
+        // 1. Gyökér könyvtár létrehozása (root)
     Directory* root = new Directory("root");
 
     // 2. Struktúra felépítése
